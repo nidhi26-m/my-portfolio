@@ -1,0 +1,667 @@
+
+/* =================================
+   1. COLOUR PALETTE & RESET
+================================= */
+
+:root {
+    --burgundy: #641f3a;
+    --dark-burgundy: #401426;
+    --rose: #a44d69;
+    --blush: #f4dce3;
+    --light-pink: #fff5f7;
+    --cream: #fffaf5;
+    --white: #ffffff;
+    --text: #493640;
+    --muted: #816d76;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =================================
+   2. NAVIGATION BAR
+================================= */
+
+.navbar {
+    width: 100%;
+    padding: 20px 8%;
+    background: var(--cream);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #f0e1e5;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: var(--burgundy);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--rose);
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--rose);
+}
+
+
+/* =================================
+   3. HOME / HERO SECTION
+================================= */
+
+.hero {
+    min-height: 90vh;
+    padding: 85px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    background:
+        radial-gradient(circle at 85% 30%,
+        #f5dce4 0%, transparent 35%),
+        var(--cream);
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.eyebrow {
+    color: var(--rose);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: 1.15;
+    color: var(--dark-burgundy);
+}
+
+.hero h1 span {
+    color: var(--rose);
+}
+
+.hero h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 25px;
+    color: var(--burgundy);
+}
+
+.hero-description {
+    margin-top: 15px;
+    color: var(--muted);
+    max-width: 480px;
+    font-size: 14px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 32px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: var(--burgundy);
+    color: var(--white);
+}
+
+.primary-button:hover {
+    background: var(--rose);
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 1px solid var(--burgundy);
+    color: var(--burgundy);
+}
+
+.secondary-button:hover {
+    background: var(--blush);
+}
+
+.hero-photo {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.photo-frame {
+    padding: 12px;
+    border: 1px solid #c98a9f;
+    border-radius: 180px 180px 10px 10px;
+}
+
+.photo-frame img {
+    display: block;
+    width: 300px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 170px 170px 5px 5px;
+}
+
+.photo-caption {
+    margin-top: 18px;
+    color: var(--burgundy);
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+
+/* =================================
+   4. COMMON SECTION STYLING
+================================= */
+
+.section {
+    padding: 100px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-burgundy);
+    font-size: clamp(30px, 4vw, 45px);
+}
+
+.section-heading h2 span {
+    color: var(--rose);
+}
+
+
+/* =================================
+   5. ABOUT SECTION
+================================= */
+
+.about {
+    background: var(--light-pink);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.about-highlight {
+    background: var(--burgundy);
+    color: var(--white);
+    padding: 45px 35px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    line-height: 1;
+    color: #edb5c6;
+}
+
+.about-highlight h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.about-highlight p {
+    margin-top: 20px;
+    color: #edcbd5;
+    font-size: 12px;
+}
+
+
+/* =================================
+   6. EDUCATION SECTION
+================================= */
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.education-card {
+    background: var(--white);
+    padding: 35px;
+    border: 1px solid #f0e1e5;
+    border-top: 4px solid var(--burgundy);
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(100, 31, 58, 0.09);
+}
+
+.card-number {
+    color: #c68da0;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+.card-label {
+    color: var(--rose);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+.education-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: var(--burgundy);
+    margin-bottom: 10px;
+}
+
+.education-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.education-card .course {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    background: var(--blush);
+    color: var(--burgundy);
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+
+/* =================================
+   7. SKILLS SECTION
+================================= */
+
+.skills {
+    background: var(--light-pink);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid #f0e1e5;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    background: var(--burgundy);
+    color: var(--white);
+    transform: translateY(-5px);
+}
+
+.skill-card span {
+    font-family: 'Playfair Display', serif;
+    color: var(--rose);
+    font-size: 26px;
+}
+
+.skill-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.skill-card:hover span {
+    color: #f2b6c6;
+}
+
+.skill-card:hover p {
+    color: #f1dce3;
+}
+
+
+/* =================================
+   8. ACHIEVEMENTS SECTION
+================================= */
+
+.achievement-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 30px 10px;
+    border-bottom: 1px solid #ead8df;
+}
+
+.achievement-icon {
+    color: var(--rose);
+    font-size: 27px;
+}
+
+.achievement-item h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--burgundy);
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.achievement-item p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =================================
+   9. ENTREPRENEURIAL VISION
+================================= */
+
+.vision {
+    background: var(--burgundy);
+    color: var(--white);
+    text-align: center;
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.vision .eyebrow {
+    color: #efb9ca;
+}
+
+.vision h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.vision h2 span {
+    color: #efb9ca;
+}
+
+.vision-content > p {
+    font-size: 14px;
+    line-height: 2;
+    color: #f0dce3;
+    margin-bottom: 20px;
+}
+
+.vision-content .vision-note {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #f5bdcf;
+}
+
+
+/* =================================
+   10. CONTACT SECTION
+================================= */
+
+.contact {
+    text-align: center;
+    background: var(--light-pink);
+}
+
+.contact-description {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 auto 30px;
+    max-width: 550px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-links a,
+.resume-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--burgundy);
+    color: var(--white);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.contact-links a:hover,
+.resume-button:hover {
+    background: var(--rose);
+    transform: translateY(-3px);
+}
+
+.resume-button {
+    margin-top: 25px;
+    background: transparent;
+    color: var(--burgundy);
+    border: 1px solid var(--burgundy);
+}
+
+
+/* =================================
+   11. FOOTER
+================================= */
+
+.footer {
+    background: var(--dark-burgundy);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 15px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--white);
+    letter-spacing: 3px;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #e5c4ce;
+    margin-top: 10px;
+}
+
+.footer .copyright {
+    margin-top: 25px;
+    font-size: 11px;
+}
+
+
+/* =================================
+   12. RESPONSIVE MOBILE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        padding: 65px 7%;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .photo-frame img {
+        width: 240px;
+        height: 320px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .navbar ul {
+        gap: 10px 14px;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .photo-frame img {
+        width: 220px;
+        height: 280px;
+    }
+
+    .section {
+        padding: 70px 7%;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .education-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card,
+    .skill-card {
+        padding: 25px;
+    }
+
+    .achievement-item {
+        gap: 15px;
+    }
+
+    .vision h2 {
+        font-size: 34px;
+    }
+
+}
